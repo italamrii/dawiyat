@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ضوئيات — تعلّم شبكات الألياف الضوئية</title>
+<meta name="description" content="برنامج مجاني بالعربي والإنجليزي لتعلّم شبكات الألياف الضوئية FTTH/GPON: دروس، ومختبرات عملية، وتجهيز للشهادات. يعمل بدون إنترنت.">
+<meta property="og:title" content="ضوئيات — تعلّم شبكات الألياف الضوئية">
+<meta property="og:description" content="44 درساً، و16 مختبراً عملياً، وتجهيز لسبع شهادات احترافية. مجاني ويعمل بدون إنترنت.">
+<meta property="og:image" content="assets/olt.webp">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#f6f7f9; --surface:#fff; --raised:#eef0f3; --line:#e2e5ea; --fg:#14171c; --muted:#555d68; --subtle:#7d8590; --accent:#2f62d6; --accent-ink:#fff; --ok:#1f8a4c; --warn:#a86a00; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1114; --surface:#16191d; --raised:#1d2126; --line:#2a2f36; --fg:#eceef1; --muted:#a3abb5; --subtle:#7d8692; --accent:#5b8cff; --accent-ink:#0b0d10; --ok:#43c47a; --warn:#e2a93b; } }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:'IBM Plex Sans Arabic', system-ui, sans-serif; line-height:1.7; }
+  a { color:inherit; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+  header.top { display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:18px; text-decoration:none; }
+  .brand img { width:32px; height:32px; border-radius:8px; }
+  .lang { font-size:14px; color:var(--muted); text-decoration:none; border:1px solid var(--line); padding:4px 12px; border-radius:6px; }
+  .hero { display:grid; grid-template-columns: 1fr 1.15fr; gap:40px; align-items:center; padding:40px 0 56px; }
+  h1 { font-size:clamp(30px, 4.4vw, 46px); line-height:1.25; margin:0 0 14px; letter-spacing:-.01em; }
+  .lead { font-size:18px; color:var(--muted); margin:0 0 26px; }
+  .btn { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--accent-ink); text-decoration:none; font-weight:600; font-size:18px; padding:14px 26px; border-radius:10px; }
+  .btn:hover { filter:brightness(1.07); }
+  .btn svg { width:20px; height:20px; }
+  .meta { margin-top:12px; font-size:14px; color:var(--subtle); }
+  .shot { width:100%; border-radius:12px; border:1px solid var(--line); box-shadow:0 18px 50px rgba(0,0,0,.14); display:block; height:auto; }
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:12px; background:var(--surface); overflow:hidden; }
+  .stats div { padding:18px; border-inline-start:1px solid var(--line); }
+  .stats div:first-child { border-inline-start:0; }
+  .stats b { display:block; font-size:28px; }
+  .stats span { color:var(--muted); font-size:14px; }
+  section { padding:56px 0 0; }
+  h2 { font-size:26px; margin:0 0 8px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px; }
+  .card h3 { margin:0 0 6px; font-size:17px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  .gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  .gallery figure { margin:0; }
+  .gallery figcaption { font-size:14px; color:var(--subtle); margin-top:6px; }
+  ol.steps { list-style:none; padding:0; margin:0; display:grid; gap:12px; counter-reset:s; }
+  ol.steps li { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 20px 16px 20px; display:flex; gap:14px; counter-increment:s; }
+  ol.steps li::before { content:counter(s); flex:0 0 32px; height:32px; border-radius:50%; background:var(--raised); display:grid; place-items:center; font-weight:700; }
+  ol.steps b { display:block; }
+  .note { border:1px solid var(--line); border-inline-start:3px solid var(--warn); background:var(--surface); border-radius:10px; padding:14px 18px; font-size:15px; color:var(--muted); margin-top:16px; }
+  .certs { display:flex; flex-wrap:wrap; gap:8px; }
+  .certs span { background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:14px; font-weight:500; }
+  .cta { text-align:center; padding:64px 0; }
+  footer { border-top:1px solid var(--line); padding:24px 0 40px; color:var(--subtle); font-size:13px; }
+  footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; }
+  .ltr { direction:ltr; unicode-bidi:isolate; }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns:1fr; padding-top:16px; }
+    .stats { grid-template-columns:repeat(2,1fr); }
+    .stats div:nth-child(3) { border-inline-start:0; }
+    .stats div:nth-child(n+3) { border-top:1px solid var(--line); }
+    .grid3, .gallery { grid-template-columns:1fr; }
+    .btn { width:100%; justify-content:center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#"><img src="assets/icon.png" alt="">ضوئيات</a>
+    <a class="lang" href="en.html" lang="en">English</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>تعلّم شبكات الألياف الضوئية… بدون ما تلمس جهاز</h1>
+      <p class="lead">برنامج مجاني بالعربي والإنجليزي يأخذك من الصفر إلى مستوى المهندس في شبكات FTTH / GPON: دروس مبسطة، ومختبرات عملية، وتجهيز للشهادات الاحترافية. ويعمل بدون إنترنت.</p>
+      <a class="btn" href="https://github.com/italamrii/dawiyat/releases/latest/download/Dawiyat-Setup.exe" id="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        تحميل البرنامج مجاناً
+      </a>
+      <div class="meta">لويندوز 10 و 11 · الإصدار <span class="ltr">0.4.0</span> · الحجم 108 ميجا</div>
+    </div>
+    <img class="shot" src="assets/inspect.webp" alt="فحص وجه الموصل داخل البرنامج" width="1440" height="900">
+  </div>
+
+  <div class="stats">
+    <div><b>44</b><span>درساً في 13 وحدة</span></div>
+    <div><b>16</b><span>مختبراً عملياً</span></div>
+    <div><b>7</b><span>شهادات احترافية</span></div>
+    <div><b>255</b><span>مصطلحاً بالعربي والإنجليزي</span></div>
+  </div>
+
+  <section>
+    <h2>وش تقدر تسوي فيه؟</h2>
+    <p class="sub">تتدرب على مواقف الميدان الحقيقية قبل ما تواجهها.</p>
+    <div class="grid3">
+      <div class="card"><h3>سطر أوامر OLT</h3><p>تسجّل عملاء على أجهزة هواوي و ZTE بأوامرها الحقيقية، وتربط خدمات الإنترنت و IPTV، وتشخّص الإنذارات.</p></div>
+      <div class="card"><h3>القياس والأعطال</h3><p>تقرأ منحنى OTDR، وتختبر الفقد، وتفحص وجه الموصل، وتتتبّع العطل بقلم الضوء الأحمر.</p></div>
+      <div class="card"><h3>التصميم والتكلفة</h3><p>تصمم شبكة حي كامل على الخريطة، ويطلع لك جدول الكميات والتكلفة وهامش الإشارة.</p></div>
+      <div class="card"><h3>سيناريو عمل كامل</h3><p>من أمر العمل إلى تسليم العميل: تجهيز، تركيب، قياس، تسجيل، إعداد، واختبار.</p></div>
+      <div class="card"><h3>محلل الحزم و Python</h3><p>تحلل حزم PPPoE و DHCP و DNS، وتكتب Python وتشغّله داخل البرنامج.</p></div>
+      <div class="card"><h3>للمعلّمين</h3><p>تجهّز اختبارات مشفّرة لطلابك، وتستقبل نتائجهم بأمان، وتعرض الدروس في الفصل.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>تجهيز للشهادات الاحترافية</h2>
+    <p class="sub">حوالي 40 سؤالاً تدريبياً لكل شهادة، محدّثة حسب آخر محاور الاختبارات المنشورة رسمياً، مع شرح لكل إجابة ومحاكاة اختبار بوقت.</p>
+    <div class="certs"><span>CCNA</span><span>Network+</span><span>HCIA-Datacom</span><span>Security+</span><span>CySA+</span><span>PCEP</span><span>PCAP</span></div>
+  </section>
+
+  <section>
+    <h2>صور من البرنامج</h2>
+    <p class="sub">مظهر داكن وفاتح، وبالعربي والإنجليزي.</p>
+    <div class="gallery">
+      <figure><img class="shot" src="assets/olt.webp" alt="سطر أوامر OLT" loading="lazy" width="1440" height="900"><figcaption>سطر أوامر OLT لهواوي و ZTE</figcaption></figure>
+      <figure><img class="shot" src="assets/design.webp" alt="مشروع تصميم FTTH" loading="lazy" width="1440" height="900"><figcaption>مشروع تصميم شبكة حي مع التكلفة</figcaption></figure>
+      <figure><img class="shot" src="assets/lesson.webp" alt="درس بالمظهر الفاتح" loading="lazy" width="1440" height="900"><figcaption>درس بالمظهر الفاتح</figcaption></figure>
+      <figure><img class="shot" src="assets/labs.webp" alt="قائمة المختبرات" loading="lazy" width="1440" height="900"><figcaption>المختبرات العملية</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>طريقة التثبيت</h2>
+    <p class="sub">ثلاث خطوات، وأقل من دقيقة.</p>
+    <ol class="steps">
+      <li><div><b>حمّل الملف</b>اضغط زر التحميل، وانتظر حتى ينتهي تحميل الملف <span class="ltr">Dawiyat-Setup-0.4.0.exe</span>.</div></li>
+      <li><div><b>افتح الملف</b>إذا ظهرت نافذة زرقاء من ويندوز بعنوان «حمى Windows جهاز الكمبيوتر»، اضغط «مزيد من المعلومات» ثم «تشغيل على أي حال».</div></li>
+      <li><div><b>ثبّت وابدأ</b>اختر مكان التثبيت أو اتركه كما هو، ثم افتح «ضوئيات» من سطح المكتب واكتب اسمك.</div></li>
+    </ol>
+    <div class="note">لماذا تظهر نافذة ويندوز؟ لأن البرنامج جديد ولم يحصل بعد على شهادة توقيع رقمي، فيعرض ويندوز الناشر على أنه «غير معروف». البرنامج لا يحتاج إنترنت ولا يرسل أي بيانات، وتقدّمك محفوظ على جهازك فقط.</div>
+  </section>
+
+  <div class="cta">
+    <h2>جاهز تبدأ؟</h2>
+    <p class="sub">مجاني بالكامل في انطلاقته.</p>
+    <a class="btn" href="https://github.com/italamrii/dawiyat/releases/latest/download/Dawiyat-Setup.exe">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      تحميل البرنامج مجاناً
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>تصميم وتطوير <b>عبدالله العمري</b> · مهندس برمجيات وذكاء اصطناعي · <a class="ltr" href="mailto:italamrii@gmail.com">italamrii@gmail.com</a></div>
+    <div>© 2026 عبدالله العمري</div>
+  </div>
+  <div class="wrap" style="margin-top:10px">الأسئلة تدريبية من إعدادنا وليست أسئلة الاختبارات الرسمية. البرنامج غير تابع لـ Cisco أو CompTIA أو Huawei أو Python Institute، والعلامات التجارية مملوكة لأصحابها.</div>
+</footer>
+</body>
+</html>
