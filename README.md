@@ -8,7 +8,7 @@ A free Arabic/English app for learning FTTH / GPON fiber networks: lessons, hand
 
 **[صفحة التحميل · Download page](https://italamrii.github.io/dawiyat/)**
 
-أو مباشرة · or directly: [Dawiyat-Setup.exe](https://github.com/italamrii/dawiyat/releases/latest/download/Dawiyat-Setup.exe) (Windows 10/11, 64-bit)
+أو مباشرة · or directly: [Dawiyat-Setup.exe](https://italamrii.github.io/dawiyat/Dawiyat-Setup.exe) (Windows 10/11, 64-bit)
 
 ---
 
